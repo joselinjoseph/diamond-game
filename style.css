@@ -1,0 +1,146 @@
+:root {
+    --brand-font: 'Black-Ops-One';
+    --brand-color: rgb(255, 192, 53);
+    --theme-background: linear-gradient(#000, var(--brand-color));
+    --brand-brown: rgb(64 48 13);
+}
+
+@font-face {
+    font-family: 'Black-Ops-One';
+    src: url(assets/fonts/BlackOpsOne-Regular.ttf);
+}
+
+html,
+body {
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    font-family: 'Black-Ops-One';
+}
+
+h1 {
+    font-family: var(--brand-font);
+    font-size: 75px;
+}
+
+.btn-primary {
+    background-color: var(--brand-color);
+    color: black;
+    width: 150px;
+    height: 40px;
+    font-size: 18px;
+    border: 1px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: box-shadow 1s linear;
+}
+
+.btn-primary:hover {
+    box-shadow: 1px 2px 2px #000;
+}
+
+.brand-text {
+    font-family: var(--brand-font);
+}
+
+main {
+    display: inline-flex;
+    width: 100%;
+}
+
+.side-bar {
+    background: var(--theme-background);
+    width: 200px;
+    padding: 20px;
+    color: #fff;
+    min-height: 100vh;
+}
+
+.diamond-container {
+    padding: 20px;
+    width: 100%;
+}
+
+.diamond-cards-container {
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px 200px;
+    grid-gap: 20px;
+    justify-content: center;
+}
+
+.diamond-card {
+    position: relative;
+    height: 200px;
+    box-shadow: 1px 1px 1px #ccc;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+}
+
+.diamond-card-front,
+.diamond-card-back {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 200px;
+    transition: display 2s linear;
+}
+
+.diamond-card-front {
+    z-index: 1;
+    background-color: #ccc;
+    background: url(assets/img/diamond.svg) #ccc 150px 150px;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    background-size: 100px;
+    background-position: center;
+}
+
+.diamond-card-back {
+    background-color: var(--brand-brown);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.diamond-img {
+    height: 175px;
+}
+
+.welcome-overlay {
+    background: var(--theme-background);
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    flex-direction: column;
+}
+
+.diamond-logo {
+    animation: logo-animation 2s linear;
+    margin-bottom: 50px;
+}
+
+@keyframes logo-animation {
+    0% {
+        transform: rotate(30deg);
+    }
+
+    50% {
+        transform: scale(1.7);
+    }
+
+    75% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

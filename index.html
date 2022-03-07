@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="favicon.ico">
+        <title>Diamond Game</title>
+        <link href="style.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div class="welcome-overlay">
+            <audio autoplay>
+                <source src=""></source>
+            </audio>
+            <h1 class="brand-text">Welcome to Diamond Game</h1>
+            <div class="diamond-logo">
+                <img class="diamond-img" alt="Diamond Image" src="assets/img/diamond.svg">
+            </div>
+            <button id="start-game" class="btn-primary">Start Game</button>
+        </div>
+        <main>
+            <aside class="side-bar">
+                <p class="brand-text">
+                    Diamond Game
+                </p>
+                <p>
+                    Player : JoseRockz
+                </p>
+                <p>
+                    Level : 1
+                </p>
+                <p>
+                    Level Score : 
+                    <span id="points"></span>
+                </p>
+                <button>Exit</button>
+            </aside>
+            <div class="diamond-container">
+                <div class="diamond-cards-container">
+                </div>
+            </div>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>
